@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+*.log
+
+# Virtual environment
+venv/
+.env/
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Byte-compiled / optimized / DLL files
+*.so
+
+# Cache
+.cache/
+.mypy_cache/
+.pytest_cache/
+
+# Local data
+chromadb/
+*.db
+
+# Ollama models (ako ih slučajno kopiraš lokalno)
+*.gguf
+
+# Environment variables
+.env
+.env.*
