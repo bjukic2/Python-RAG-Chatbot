@@ -5,12 +5,12 @@ The system retrieves relevant documents from a local vector database (**ChromaDB
 
 The project is split into two independent parts:
 
-- backend/ - FastAPI, RAG pipeline, ChromaDB, ingestion scripts
-- frontend/ - Next.js chat interface
+- **backend/** - FastAPI, RAG pipeline, ChromaDB, ingestion scripts
+- **frontend/** - Next.js chat interface
 
 ---
 
-# Features
+## Features
 
 - **RAG pipeline** for document retrieval
 - **FastAPI backend** with clean modular architecture
@@ -19,3 +19,59 @@ The project is split into two independent parts:
 - **Embeddings + vector search** via ChromaDB
 - **CORS-enabled** for safe frontend <-> backend communication
 - **Easily extendable** for new models, data sources or UI features
+
+---
+
+## Getting started
+
+### 1. Clone the repo
+
+```bash
+# In terminal
+git clone https://github.com/bjukic2/Python-RAG-Chatbot.git
+
+# Navigate to the project folder
+cd Python-RAG-Chatbot
+```
+
+### 2. Install dependencies
+
+```bash
+# Install dependencies for backend
+cd backend/
+pip install -r requirements.txt
+
+# Return to previous folder
+cd ..
+
+# Install dependencies for frontend
+cd frontend/
+npm install
+
+# Return to previous folder
+cd ..
+```
+
+### 3. Run the project
+
+```bash
+# Open two terminals
+
+# In terminal one run backend
+cd backend/
+uvicorn main:app --reload
+
+# In terminal two run frontend
+cd frontend/
+npm run dev
+```
+
+### 4. Use the chatbot
+
+Open http://localhost:3000 and type your question in the **text field and pres** "**Send**"
+
+---
+
+## Author
+
+Made by **Bruno Jukić** [https://github.com/bjukic2]
