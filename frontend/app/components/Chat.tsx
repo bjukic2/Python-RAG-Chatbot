@@ -53,7 +53,7 @@ export default function Chat() {
 
         {loading && (
           <div className="mb-3 p-2 rounded bg-gray-100 text-gray-500 w-fit animate-pulse">
-            Razmišljam...
+            Thinking...
           </div>
         )}
       </div>
@@ -69,7 +69,7 @@ export default function Chat() {
           onClick={sendMessage}
           className="bg-blue-600 text-white px-4 py-2 rounded cursor-pointer"
         >
-          Pošalji
+          Send
         </button>
       </div>
     </div>
