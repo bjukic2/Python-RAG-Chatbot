@@ -6,7 +6,7 @@ class RAGPipeline:
     def __init__(self, model_name: str = "llama3.1"):
         self.embedder = Embedder()
         self.store = VectorStore()
-        self.model = model_name   # Ollama chat model
+        self.model = model_name 
 
     def run(self, query: str) -> str:
         # 1) Embedding upit

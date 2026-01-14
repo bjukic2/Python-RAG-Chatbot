@@ -4,3 +4,4 @@ requests
 chromadb>=0.5.0
 pydantic
 python-dotenv
+pydantic-settings
