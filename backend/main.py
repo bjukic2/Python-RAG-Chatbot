@@ -15,10 +15,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.add_middleware(
-    CORSMiddleware
-)
-
 app.include_router(chat_router, prefix="/api")
 
 @app.get("/health")
