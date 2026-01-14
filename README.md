@@ -1,7 +1,7 @@
 # RAG Chatbot - FastAPI + Next.js
 
 An interactive chatbot powered by **Retrieval-Augmented Generation (RAG)**, built with **FastAPI backend** and a **Next.js** frontend.
-The system retrieves relevant documents from a local vector database (**ChromaDB**) and generates context-aware answers through a custom RAG pipeline. It uses open-source **llama3-1** model, so it can answer some general knowledge questions without needing any external documents.
+The system retrieves relevant documents from a local vector database (**ChromaDB**) and generates context-aware answers through a custom RAG pipeline. It uses local open-source **llama3-1** model, so it can answer some general knowledge questions without needing any external documents.
 
 The project is split into two independent parts:
 
@@ -68,7 +68,7 @@ npm run dev
 
 ### 4. Use the chatbot
 
-Open http://localhost:3000 and type your question in the **text field and pres** "**Send**"
+Open http://localhost:3000 and type your question in the **text field and press** "**Send**"
 
 ---
 
