@@ -1,4 +1,5 @@
 from fastapi import APIRouter
+from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 from app.rag.pipeline import RAGPipeline
 
@@ -8,10 +9,16 @@ pipeline = RAGPipeline()
 class ChatRequest(BaseModel):
     message: str
 
-class ChatResponse(BaseModel):
-    answer: str
 
-@router.post("/chat", response_model=ChatResponse)
-async def chat(request: ChatRequest):
-    answer = pipeline.run(request.message)
-    return ChatResponse(answer=answer)
+@router.post("/chat/stream")
+async def chat_stream(request: ChatRequest):
+
+    async def event_generator():
+        async for token in pipeline.run_stream(request.message):
+            # mora biti bytes, ne string
+            yield token.encode("utf-8")
+
+    return StreamingResponse(
+        event_generator(),
+        media_type="text/event-stream"
+    )
