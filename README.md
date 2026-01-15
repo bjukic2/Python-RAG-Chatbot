@@ -39,6 +39,7 @@ cd Python-RAG-Chatbot
 ```bash
 # Install dependencies for backend
 cd backend/
+source venv/bin/activate
 pip install -r requirements.txt
 
 # Return to previous folder
@@ -52,7 +53,15 @@ npm install
 cd ..
 ```
 
-### 3. Run the project
+### 3. Installing Llama using Ollama
+
+```bash
+curl -fsSL https://ollama.com/install.sh | sudo sh
+ollama pull llama3.1
+ollama run llama3.1
+```
+
+### 4. Run the project
 
 ```bash
 # Open two terminals
@@ -66,7 +75,7 @@ cd frontend/
 npm run dev
 ```
 
-### 4. Use the chatbot
+### 5. Use the chatbot
 
 Open http://localhost:3000 and type your question in the **text field and press** "**Send**"
 
